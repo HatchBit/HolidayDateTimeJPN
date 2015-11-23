@@ -165,7 +165,8 @@ class HolidayDateTime extends DateTime
        // 第*月曜日の日付を求める
        $w = 1; // 月曜日固定
        $d1 = new DateTime($this->format('Y-m-1'));
-       $w1 = intval($d1->dayOfWeek);
+       //$w1 = intval($d1->dayOfWeek);
+       $w1 = intval($d1->format('w'));
        $day  = $w - $w1 < 0 ? 7 + $w - $w1 : $w - $w1;
        $day++;
        $day = $day + 7 * ($week - 1);
