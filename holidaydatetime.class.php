@@ -236,3 +236,4 @@ class HolidayDateTime extends DateTime
             return (int) $this->format($formats[$name]);
         }
     }
+}

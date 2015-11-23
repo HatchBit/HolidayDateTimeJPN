@@ -12,12 +12,13 @@
  * @since       Version 1.0
  * @filesource
  */
+error_reporting(E_ALL);
 
 /*====================
   DEFINE
   ====================*/
 
-require './holidaydatetime.class.php';
+require( dirname(__FILE__).'/holidaydatetime.class.php' );
 
 /*====================
   BEFORE ACTIONS
@@ -26,6 +27,7 @@ require './holidaydatetime.class.php';
 $dateStr = date('Y-m-d');
 if(isset($_POST['date'])) $dateStr = $_POST['date'];
 if(isset($_GET['date'])) $dateStr = $_GET['date'];
+//echo $dateStr;
 
 /*====================
   MAIN ACTIONS
@@ -33,11 +35,12 @@ if(isset($_GET['date'])) $dateStr = $_GET['date'];
 
 $datetime = new HolidayDateTime($dateStr);
 $result = $datetime->holiday();
+//var_dump($result);
 
 if($result === false){
-    return "FALSE";
+    echo "FALSE";
 }else{
-    return $result;
+    echo $result;
 }
 
 /*====================
