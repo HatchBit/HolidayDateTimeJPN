@@ -9,7 +9,7 @@
  */
 
 /* USAGE
-    $datetime = new DateTime();
+    $datetime = new HolidayDateTime();
     $datetime->holiday();
     
     // 祝日の場合："勤労感謝の日"
