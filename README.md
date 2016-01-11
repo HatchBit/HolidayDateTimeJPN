@@ -3,6 +3,10 @@
 Japanese holiday class.
 祝日かどうか判定できるDateTime拡張クラス
 
+# Warning #
+
+祝日のルールが変わっており、正しく判定できていません。
+
 
 ## Original ##
 
